@@ -11,7 +11,7 @@ const ImageSliderCom = () => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % Images.length);
       setAnimation(false);
-    }, 300);
+    }, 2000);
   }, []);
 
   const prevImage = useCallback(() => {
@@ -21,7 +21,7 @@ const ImageSliderCom = () => {
         (prevIndex) => (prevIndex - 1 + Images.length) % Images.length
       );
       setAnimation(false);
-    }, 300);
+    }, 2000);
   }, []);
 
   // Auto slide using interval (cleaned up properly)
@@ -65,8 +65,8 @@ const ImageSliderCom = () => {
                 className={`slide-image ${animation ? "fade-out" : "fade-in"}`}
                 loading="lazy"
               />
-              <h4 className="slide-title">{sliders.title}</h4>
-              <p className="slide-heading">{sliders.heading}</p>
+              <h4 className={`slide-title ${animation ? "fade-out":"fade-in"}`}>{sliders.title}</h4>
+              <p className={`slide-heading ${animation ?"fade-out":"fade-in"}`}>{sliders.heading}</p>
             </article>
           );
         })}
