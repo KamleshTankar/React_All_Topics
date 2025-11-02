@@ -1,0 +1,127 @@
+.image-slider-container {
+    width: 100vw;
+    height: 90vh;
+    margin-top: -26px;
+    background-repeat: no-repeat;
+    background-size: 100vw 85vh;
+    transition: background-image 0.3s ease-in-out;
+    position: relative;
+}
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.slider-details-container{
+width: 20vw;
+height: 45vh;
+background-color: #00000076;
+color: #fff;
+padding: 0.5rem;
+border-radius: 5%;
+position: absolute;
+bottom: 70px;
+left: 15px;
+}
+.slider-container-placeinfo{
+    font-size: 1rem;
+}
+.slider-container-placehead{
+    font-size: 3rem;
+}
+.slider-animation{
+    transform: translateY(150px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+.slider-animation{
+    animation-delay: 1.2s;
+}
+
+
+.image-slider {
+    width: 70vw;
+    height: 45vh;
+    display: flex;
+    gap: 0.5rem;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    bottom: 70px;
+}
+.slide {
+    /* width: 60vw; */
+    height: 45vh;
+    position: relative;
+}
+.slide-image{
+    width: 100%;
+    height: 100%;
+}
+.slide-title {
+width: 100%;
+color: #f9870d;
+position: absolute;
+bottom: 60px;
+}
+.slide-heading {
+width: 100%;
+color: white;
+position: absolute;
+bottom: 20px;
+}
+
+.slider-controls {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    position:absolute;
+    bottom: 20px;
+    right: 45%;
+}
+.slider-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    /* transition: background 0.3s ease; */
+}
+.slider-btn:hover {
+    background: #555;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8rem;
+    position: absolute;
+    bottom: 0px;
+    right: 0%;
+}
+.dot {
+    width: 190px;
+    height: 8px;
+    /* border-radius: 25%; */
+    background: #ccc;
+    cursor: pointer;
+    /* transition: background 0.3s ease; */
+}
+.dot.active {
+    background: #333;
+}

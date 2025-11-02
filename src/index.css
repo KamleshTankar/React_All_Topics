@@ -5,9 +5,59 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  position: relative;
 }
 
+/* body {
+  font-family: "Poppins", sans-serif;
+} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-button {
+  background-color: rgb(18, 184, 249);
+}
+
+*::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: rgb(243, 237, 188);
+  display: block;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: rgb(254, 51, 15);
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  display: block;
+}
+
+/* .scrollbarh::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
+
+html {
+  font-size: 80%;
+  scroll-behavior: smooth;
 }
